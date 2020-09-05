@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #31342f;
+}
+
+#logo {
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fill 1s ease-in-out forwards 2.9s;
+}
+
+#logo path:nth-child(1) {
+  stroke-dasharray: 988px;
+  stroke: white;
+  stroke-dashoffset: 988px;
+  animation: line-anim 2s ease-in-out forwards 0.5s;
+}
+
+#logo path:nth-child(2) {
+  stroke-dasharray: 988px;
+  stroke: white;
+  stroke-dashoffset: 988px;
+  animation: line-anim 2s ease-in-out forwards 0.7s;
+}
+
+#logo path:nth-child(3) {
+  stroke-dasharray: 988px;
+  stroke: white;
+  stroke-dashoffset: 988px;
+  animation: line-anim 2s ease-in-out forwards 0.9s;
+}
+
+#logo path:nth-child(4) {
+  stroke-dasharray: 988px;
+  stroke: white;
+  stroke-dashoffset: 988px;
+  animation: line-anim 2s ease-in-out forwards 1.1s;
+}
+
+#logo path:nth-child(5) {
+  stroke-dasharray: 988px;
+  stroke: white;
+  stroke-dashoffset: 988px;
+  animation: line-anim 2s ease-in-out forwards 1.3s;
+}
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: white;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

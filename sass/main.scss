@@ -1,0 +1,41 @@
+@import "./variables";
+@import "./config";
+
+
+#logo{
+    position: absolute;
+    width: 50%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  
+    animation: fill 1s ease-in-out forwards 2.9s;
+
+}
+
+@for $i from 1 through 5 {
+#logo path:nth-child(#{$i}){
+    //add space in path
+    stroke-dasharray: 988px;
+    stroke: $text-color;
+    //move position of clean space
+   stroke-dashoffset: 988px;
+   animation: line-anim 2s ease-in-out forwards (0.2s*$i + 0.3s);
+
+
+}
+}
+
+@keyframes line-anim {
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes fill{
+    from{
+        fill: transparent;
+    }  
+    to{
+        fill: $text-color ;
+    }  
+}
